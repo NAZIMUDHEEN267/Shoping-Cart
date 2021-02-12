@@ -41,4 +41,13 @@ router.get('/', function(req, res, next) {
   res.render('admin/view-products',{admin:true,products})
 });
 
+router.get('/admin-products',(req,res)=>{
+  res.render('admin/admin-products')
+})
+
+router.post('/admin-products',(req,res)=>{
+  console.log(req.body);
+  console.log(req.file.Image)
+})
+
 module.exports = router;
